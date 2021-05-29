@@ -44,6 +44,8 @@ elseif(isset($_POST['busqueda'])){
                 echo "La cantidad disponible es: " . $fila[4];
                 echo '<br>';
                 echo "El estado es: " . $fila[5];
+                echo '<br>';
+                echo "El ID del Proveedor es: " . $fila[6];
         }
     }
 

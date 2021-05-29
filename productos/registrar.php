@@ -9,11 +9,12 @@ $Marca=$_POST['Marca'];
 $precio=$_POST['Precio'];
 $Cantidad=$_POST['Cantidad'];
 $Estado=$_POST['Estado'];
+$Proveedor=$_POST['Proveedor'];
 
 
     mysqli_select_db($enlace, $nombreBD);
 
-$inser1="INSERT INTO PRODUCTO (ID_PRODUCTO, NOMBRE_PRODUCTO, MARCA_PRODUCTO, PRECIO, CANTIDAD, ESTADO) VALUES ('$ID', '$Nombre', '$Marca', '$precio', '$Cantidad', '$Estado');";
+$inser1="INSERT INTO PRODUCTO (ID_PRODUCTO, NOMBRE_PRODUCTO, MARCA_PRODUCTO, PRECIO, CANTIDAD, ESTADO, ID_PROVEEDOR) VALUES ('$ID', '$Nombre', '$Marca', '$precio', '$Cantidad', '$Estado','$Proveedor');";
 
 
 mysqli_query($enlace,$inser1);
@@ -42,6 +43,26 @@ mysqli_close($enlace);
 <br>
 <P>Estado </P><input type="text" name="Estado">
 <br>
+<p>Proveedor:</p>
+<select name="Proveedor">
+<?php
+mysqli_select_db($enlace, $nombreBD);
+$busqueda1="SELECT * FROM PROVEEDOR;";
+$resultado1=mysqli_query($enlace,$busqueda1);
+    foreach ($resultado1 as $val){
+
+        
+
+
+?>
+                <option value="<?php echo $val['ID_PROVEEDOR'];?>"> <?php echo $val['NOMBRE_PROVEEDOR'];?></option>
+                <?php
+                }
+                ?>
+                </select>
+
+
+<br>            
 <br>
 
 <input type="submit" name="registrar" value="Registrar Producto">
