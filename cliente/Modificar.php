@@ -2,6 +2,31 @@
 include 'Conex.php';
 $Tipot=array('Empresa','Particular');
 
+if(isset($_POST['complet'])){
+
+    mysqli_select_db($enlace, $nombreBD);
+    $auto=$_POST['auto'];
+
+    $busqueda1="SELECT * FROM CLIENTES WHERE DNI LIKE '$auto';";
+    $resultado1=mysqli_query($enlace,$busqueda1);
+        if(mysqli_num_rows($resultado1) > 0){
+
+            while($fila=mysqli_fetch_array($resultado1)){
+        
+                $auto1=$fila[0];
+                $auto2=$fila[1];
+                $auto3=$fila[2];
+                $auto4=$fila[3];
+                $auto5=$fila[4];
+                $auto6=$fila[5];
+				$auto7=$fila[6];
+                $auto8=$fila[7];
+
+
+    }
+}
+}
+
 if(isset($_POST['actualizar'])){
 
 $ID=$_POST['ID'];
@@ -35,9 +60,16 @@ mysqli_close($enlace);
 <body>
 <i><h1>Actualizacion de cliente</h1></i>
 <form action="" method="POST">
-<p>ID </p><input type="text" name="ID" >
+<h3>Autocompletar datos anteriores</h3>
+<p>DNI</p><input type="text" name="auto" >
+<input type="submit" name="complet" value="Autocompletar">
 <br>
-<p>DNI </p><input type="text" name="DNI" REQUIRED>
+<br>
+<br>
+<br>
+<p>ID </p><input type="text" name="ID" value="<?php if (isset($_POST['complet'])){echo $auto1;} ?>">
+<br>
+<p>DNI </p><input type="text" name="DNI" value="<?php if (isset($_POST['complet'])){echo $auto2;} ?>">
 <br>
 
 <p><input type="radio" id="Señor" name="gender" value="Señor"/>Señor</p>
@@ -46,11 +78,11 @@ mysqli_close($enlace);
 
 
 <br>
-<P>Nombre </P><input type="text" name="Nombre">
+<P>Nombre </P><input type="text" name="Nombre" value="<?php if (isset($_POST['complet'])){echo $auto4;} ?>">
 <br>
-<p>Correo electronico </p><input type="email" name="correo">
+<p>Correo electronico </p><input type="email" name="correo" value="<?php if (isset($_POST['complet'])){echo $auto6;} ?>">
 <br>
-<p>Teléfono  </p><input type="number" name="telefono">
+<p>Teléfono  </p><input type="number" name="telefono" value="<?php if (isset($_POST['complet'])){echo $auto5;} ?>">
 <br>
 <br>
 <p>Tipo

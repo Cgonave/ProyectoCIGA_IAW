@@ -1,5 +1,26 @@
 <?php
 include 'Conex.php';
+if(isset($_POST['complet'])){
+
+    mysqli_select_db($enlace, $nombreBD);
+    $auto=$_POST['auto'];
+
+    $busqueda1="SELECT * FROM PROVEEDOR WHERE ID_PROVEEDOR LIKE '$auto';";
+    $resultado1=mysqli_query($enlace,$busqueda1);
+        if(mysqli_num_rows($resultado1) > 0){
+
+            while($fila=mysqli_fetch_array($resultado1)){
+        
+                $auto1=$fila[0];
+                $auto2=$fila[1];
+                $auto3=$fila[2];
+                $auto4=$fila[3];
+
+
+
+    }
+}
+}
 
 if(isset($_POST['actualizar'])){
 
@@ -28,13 +49,20 @@ mysqli_close($enlace);
 <body>
 <i><h1>Actualizacion de Proveedor</h1></i>
 <form action="" method="POST">
-<p>ID </p><input type="text" name="ID" >
+<h3>Autocompletar datos anteriores</h3>
+<p>ID</p><input type="text" name="auto" >
+<input type="submit" name="complet" value="Autocompletar">
 <br>
-<P>Nombre </P><input type="text" name="Nombre">
 <br>
-<P>CIF </P><input type="text" name="CIF">
 <br>
-<p>Teléfono  </p><input type="number" name="Telefono">
+<br>
+<p>ID </p><input type="text" name="ID" value="<?php if (isset($_POST['complet'])){echo $auto1;} ?>">
+<br>
+<P>Nombre </P><input type="text" name="Nombre" value="<?php if (isset($_POST['complet'])){echo $auto2;} ?>">
+<br>
+<P>CIF </P><input type="text" name="CIF" value="<?php if (isset($_POST['complet'])){echo $auto3;} ?>">
+<br>
+<p>Teléfono  </p><input type="number" name="Telefono"value="<?php if (isset($_POST['complet'])){echo $auto4;} ?>">
 <br>
 
 <br>
