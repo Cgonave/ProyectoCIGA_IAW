@@ -11,11 +11,12 @@ $Nombre=$_POST['Nombre'];
 $Correo=$_POST['correo'];
 $telefono=$_POST['telefono'];
 $tipo=$_POST['Tipo'];
+$Pedido=$_POST['Pedido'];
 
 
     mysqli_select_db($enlace, $nombreBD);
 
-$actua1="UPDATE CLIENTES SET ID_CLIENTE = '$ID', DNI ='$DNI', TRATO='$Trato', NOMBRE='$Nombre', CORREO='$Correo', TELEFONO='$telefono', TIPO='$tipo' WHERE DNI LIKE '$DNI';";
+$actua1="UPDATE CLIENTES SET ID_CLIENTE = '$ID', DNI ='$DNI', TRATO='$Trato', NOMBRE='$Nombre', CORREO='$Correo', TELEFONO='$telefono', TIPO='$tipo', ID_PEDIDO='$Pedido' WHERE DNI LIKE '$DNI';";
 
 
 mysqli_query($enlace,$actua1);
@@ -23,7 +24,7 @@ mysqli_query($enlace,$actua1);
 mysqli_close($enlace);
 }
 
-echo '<script language="javascript">alert("El Cliente ha sido actualizado correctamente");</script>';
+
 
 ?>
 
@@ -67,6 +68,28 @@ echo '<script language="javascript">alert("El Cliente ha sido actualizado correc
 
 
 </select></p>
+<br>
+<p>Pedido:</p>
+<select name="Pedido">
+<?php
+mysqli_select_db($enlace, $nombreBD);
+$busqueda1="SELECT * FROM PEDIDOS;";
+$resultado1=mysqli_query($enlace,$busqueda1);
+    foreach ($resultado1 as $val){
+
+        
+
+
+?>
+				<option value="Sin pedidos"> </option>			
+                <option value="<?php echo $val['ID_PEDIDO'];?>"> <?php echo $val['ID_PEDIDO'];?></option>
+                <?php
+                }
+                ?>
+                </select>
+
+
+<br>  
 <br>
 
 

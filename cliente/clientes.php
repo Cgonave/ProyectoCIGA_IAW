@@ -49,6 +49,7 @@ elseif(isset($_POST['busqueda'])){
                 echo '<br>';
                 echo "El tipo de cliente es: " . $fila[6];
                 echo '<br>';
+                echo "El ID de Pedido es: " . $fila[7];
 
         }
     }

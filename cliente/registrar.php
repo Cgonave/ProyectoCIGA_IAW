@@ -11,12 +11,13 @@ $Nombre=$_POST['Nombre'];
 $Correo=$_POST['correo'];
 $telefono=$_POST['telefono'];
 $tipo=$_POST['Tipo'];
+$Pedido=$_POST['Pedido'];
 
 
 
     mysqli_select_db($enlace, $nombreBD);
 
-$inser1="INSERT INTO CLIENTES (ID_CLIENTE, DNI, TRATO, NOMBRE, CORREO, TELEFONO, TIPO) VALUES ('$ID','$DNI', '$Trato', '$Nombre', '$Correo', '$telefono', '$tipo');";
+$inser1="INSERT INTO CLIENTES (ID_CLIENTE, DNI, TRATO, NOMBRE, CORREO, TELEFONO, TIPO, ID_PEDIDO) VALUES ('$ID','$DNI', '$Trato', '$Nombre', '$Correo', '$telefono', '$tipo','$Pedido');";
 
 
 mysqli_query($enlace,$inser1);
@@ -66,6 +67,27 @@ mysqli_close($enlace);
 
 </select></p>
 <br>
+<p>Pedido:</p>
+<select name="Pedido">
+<?php
+mysqli_select_db($enlace, $nombreBD);
+$busqueda1="SELECT * FROM PEDIDOS;";
+$resultado1=mysqli_query($enlace,$busqueda1);
+    foreach ($resultado1 as $val){
+
+        
+
+
+?>
+				<option value="Sin pedidos">Sin Pedidos</option>			
+                <option value="<?php echo $val['ID_PEDIDO'];?>"> <?php echo $val['ID_PEDIDO'];?></option>
+                <?php
+                }
+                ?>
+                </select>
+
+
+<br>  
 
 <p><input type="checkbox" name="terminos" value="Acepto los terminos y condiciones de uso."/>Acepto los terminos y condiciones de uso.</p>
 <p><input type="checkbox" name="terminos" value="Tengo conocimiento sobre la ley de proteccion de datos y manejo de información personal."/>Tengo conocimiento sobre la ley de proteccion de datos y manejo de información personal.</p>
