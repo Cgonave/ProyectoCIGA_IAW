@@ -67,6 +67,7 @@ $resultado1=mysqli_query($enlace,$busqueda1);
 
 <input type="submit" name="registrar" value="Registrar Producto">
 <input type="submit" name="Reset" value="Limpiar" />
+<a href="producto.php"><input type="button" name="Inicio" value="Volver Al Menu" /></a>
 
 
 </form>

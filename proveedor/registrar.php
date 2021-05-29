@@ -41,6 +41,7 @@ mysqli_close($enlace);
 
 <input type="submit" name="registrar" value="Registrar Proveedor">
 <input type="submit" name="Reset" value="Limpiar" />
+<a href="proveedor.php"><input type="button" name="Inicio" value="Volver Al Menu" /></a>
 
 
 </form>

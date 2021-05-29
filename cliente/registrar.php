@@ -94,7 +94,7 @@ $resultado1=mysqli_query($enlace,$busqueda1);
 <input type="submit" name="registro" value="Registrar Cliente">
 <input type="submit" name="Reset" value="Limpiar" />
 <br>
-<a href="clientes.php"><input type="button" name="Inicio" value="Volver Al Inicio" /></a>
+<a href="clientes.php"><input type="button" name="Inicio" value="Volver Al Menu" /></a>
 
 
 </form>
