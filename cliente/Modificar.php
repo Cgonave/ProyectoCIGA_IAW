@@ -112,8 +112,7 @@ $resultado1=mysqli_query($enlace,$busqueda1);
         
 
 
-?>
-				<option value="Sin pedidos"> </option>			
+?>		
                 <option value="<?php echo $val['ID_PEDIDO'];?>"> <?php echo $val['ID_PEDIDO'];?></option>
                 <?php
                 }
