@@ -9,11 +9,11 @@ $Marca=$_POST['Marca'];
 $precio=$_POST['Precio'];
 $Cantidad=$_POST['Cantidad'];
 $Estado=$_POST['Estado'];
-
+$Proveedor=$_POST['Proveedor'];
 
     mysqli_select_db($enlace, $nombreBD);
 
-$actua1="UPDATE PRODUCTO SET ID_PRODUCTO = '$ID', NOMBRE_PRODUCTO='$Nombre', MARCA_PRODUCTO='$Marca', PRECIO='$precio', CANTIDAD='$Cantidad', ESTADO='$Estado' WHERE ID_PRODUCTO LIKE '$ID';";
+$actua1="UPDATE PRODUCTO SET ID_PRODUCTO = '$ID', NOMBRE_PRODUCTO='$Nombre', MARCA_PRODUCTO='$Marca', PRECIO='$precio', CANTIDAD='$Cantidad', ESTADO='$Estado', ID_PROVEEDOR='$Proveedor' WHERE ID_PRODUCTO LIKE '$ID';";
 
 
 mysqli_query($enlace,$actua1);
@@ -42,6 +42,26 @@ mysqli_close($enlace);
 <br>
 <P>Estado </P><input type="text" name="Estado">
 <br>
+<p>Proveedor:</p>
+<select name="Proveedor">
+<?php
+mysqli_select_db($enlace, $nombreBD);
+$busqueda1="SELECT * FROM PROVEEDOR;";
+$resultado1=mysqli_query($enlace,$busqueda1);
+    foreach ($resultado1 as $val){
+
+        
+
+
+?>
+                <option value="<?php echo $val['ID_PROVEEDOR'];?>"> <?php echo $val['NOMBRE_PROVEEDOR'];?></option>
+                <?php
+                }
+                ?>
+                </select>
+
+
+<br>  
 <br>
 
 <input type="submit" name="actualizar" value="Actualizar Producto">
