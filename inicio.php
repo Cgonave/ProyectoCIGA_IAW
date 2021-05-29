@@ -13,16 +13,24 @@ elseif(isset($_POST['proveedor'])){
 }
 ?>
 <html>
+<link href="inicio.css" rel="stylesheet" type="text/css">
     <body>
 <center>
+    <fieldset id="titu">
     <h1>Menu Principal</h1>
-<fieldset>
+</fieldset>
+<fieldset id="fieldset">
 <h2>Indique la acción que desea realizar</h2>
+<hr id="linea">
 <form method="POST" action=""> 
-      
-       <input type="submit" name="cliente" value="Editor de Clientes" />
-       <input type="submit" name="producto" value="Editor de productos"/>
-      <input type="submit" name="proveedor" value="Editor de Proveedores" />
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+       <input type="submit" name="cliente" id="cliente" value="Editor de Clientes" />
+       <input type="submit" name="producto" id="producto" value="Editor de productos"/>
+      <input type="submit" name="proveedor" id="proveedor" value="Editor de Proveedores" />
 
 </fieldset>
 </center>

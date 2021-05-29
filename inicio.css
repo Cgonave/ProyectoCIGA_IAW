@@ -1,0 +1,53 @@
+body{
+background: url(background.jpg) ;
+
+
+}
+#titu{
+    background-color: lightblue;
+    width:750px;
+}
+h1{
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+#linea{
+background-color: black;
+}
+#fieldset{
+background-color: lightblue;
+width:750px;
+height:400px ;
+}
+
+#cliente{
+border-style: dashed 1px black solid;
+background-color: rgb(230, 199, 173);
+border-radius: 30px;
+height: 40px;
+
+}
+#cliente:hover{
+background-color: rgb(186, 230, 173);;
+}
+#producto{
+    border-style: dashed 1px black solid;
+    background-color:  rgb(230, 199, 173);
+    border-radius: 30px;
+    height: 40px;
+    
+    }
+    #producto:hover{
+        background-color: rgb(186, 230, 173);;
+        }
+    #proveedor{
+        border-style: dashed 1px black solid;
+        background-color:  rgb(230, 199, 173);
+        border-radius: 30px;
+        height: 40px;
+        
+        }
+        #proveedor:hover{
+            background-color: rgb(186, 230, 173);;
+            }
+
