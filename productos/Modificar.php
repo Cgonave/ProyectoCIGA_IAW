@@ -48,6 +48,7 @@ mysqli_close($enlace);
 
 <html>
 <head>
+<link href="productos2.css" rel="stylesheet" type="text/css">
 <meta charset="UTF-8">
 </head>
 <body>
@@ -55,7 +56,7 @@ mysqli_close($enlace);
 <form action="" method="POST">
 <h3>Autocompletar datos anteriores</h3>
 <p>ID</p><input type="text" name="auto" >
-<input type="submit" name="complet" value="Autocompletar">
+<input type="submit" name="complet" id="button" value="Autocompletar">
 <br>
 <br>
 <br>
@@ -94,9 +95,9 @@ $resultado1=mysqli_query($enlace,$busqueda1);
 <br>  
 <br>
 
-<input type="submit" name="actualizar" value="Actualizar Producto">
-<input type="submit" name="Reset" value="Limpiar" />
-<a href="producto.php"><input type="button" name="Inicio" value="Volver Al Menu" /></a>
+<input type="submit" name="actualizar" id="button" value="Actualizar Producto">
+<input type="submit" name="Reset" id="button" value="Limpiar" />
+<a href="producto.php"><input type="button" name="Inicio" id="button" value="Volver Al Menu" /></a>
 
 
 </form>

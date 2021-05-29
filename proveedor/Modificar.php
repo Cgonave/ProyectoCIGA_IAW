@@ -44,6 +44,7 @@ mysqli_close($enlace);
 
 <html>
 <head>
+<link href="proveedor2.css" rel="stylesheet" type="text/css">
 <meta charset="UTF-8">
 </head>
 <body>
@@ -51,7 +52,7 @@ mysqli_close($enlace);
 <form action="" method="POST">
 <h3>Autocompletar datos anteriores</h3>
 <p>ID</p><input type="text" name="auto" >
-<input type="submit" name="complet" value="Autocompletar">
+<input type="submit" name="complet"  id="button" value="Autocompletar">
 <br>
 <br>
 <br>
@@ -67,9 +68,9 @@ mysqli_close($enlace);
 
 <br>
 
-<input type="submit" name="actualizar" value="Actualizar Proveedor">
-<input type="submit" name="Reset" value="Limpiar" />
-<a href="proveedor.php"><input type="button" name="Inicio" value="Volver Al Menu" /></a>
+<input type="submit" name="actualizar" id="button" value="Actualizar Proveedor">
+<input type="submit" name="Reset" id="button" value="Limpiar" />
+<a href="proveedor.php"><input type="button" id="button" name="Inicio" value="Volver Al Menu" /></a>
 
 
 </form>

@@ -116,19 +116,22 @@ elseif(isset($_POST['actualizar'])){
 ?>
 <html>
     <body>
+    <link href="cliente.css" rel="stylesheet" type="text/css">
 <center>
+    <fielset id="titu">
     <h1>Editor de clientes</h1>
-<fieldset>
+</fieldset>
+<fieldset id="fieldset">
 <form method="POST" action=""> 
        <p>Introduzca el DNI :<input type="text" name="comprDNI"/></p>
        <br>
-       <input type="submit" name="registrar" value="Registrar" />
-       <input type="submit" name="busqueda" value="Buscar Cliente"/>
-      <input type="submit" name="delete" value="Eliminar Cliente" />
-       <input type="submit" name="actualizar" value="Actualizar Cliente" />
+       <input type="submit" name="registrar" id="button" value="Registrar" />
+       <input type="submit" name="busqueda"  id="button" value="Buscar Cliente"/>
+      <input type="submit" name="delete" id="button" value="Eliminar Cliente" />
+       <input type="submit" name="actualizar" id="button" value="Actualizar Cliente" />
        <br>
-       <input type="reset" name="Reset" value="Limpiar" />
-       <a href="http://localhost/Proyectoiaw/inicio.php"><input type="button" name="Inicio" value="Volver Al Inicio" /></a>
+       <input type="reset" name="Reset" id="button" value="Limpiar" />
+       <a href="http://localhost/Proyectoiaw/inicio.php"><input type="button" name="Inicio" id="button" value="Volver Al Inicio" /></a>
     </form>
 </fieldset>
 </center>

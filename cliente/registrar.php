@@ -28,6 +28,7 @@ mysqli_close($enlace);
 
 <html>
 <head>
+<link href="cliente2.css" rel="stylesheet" type="text/css">
 <meta charset="UTF-8">
 </head>
 <body>
@@ -90,12 +91,13 @@ $resultado1=mysqli_query($enlace,$busqueda1);
 
 <p><input type="checkbox" name="terminos" value="Acepto los terminos y condiciones de uso."/>Acepto los terminos y condiciones de uso.</p>
 <p><input type="checkbox" name="terminos" value="Tengo conocimiento sobre la ley de proteccion de datos y manejo de información personal."/>Tengo conocimiento sobre la ley de proteccion de datos y manejo de información personal.</p>
-<input type="submit" name="registro" value="Registrar Cliente">
-<input type="submit" name="Reset" value="Limpiar" />
+<input type="submit" name="registro" id="button" value="Registrar Cliente">
+<input type="submit" name="Reset" id="button" value="Limpiar" />
 <br>
-<a href="clientes.php"><input type="button" name="Inicio" value="Volver Al Menu" /></a>
+<a href="clientes.php"><input type="button" id="button" name="Inicio" value="Volver Al Menu" /></a>
 
 
 </form>
+           
 </body>
 </html>

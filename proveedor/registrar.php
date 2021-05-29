@@ -23,6 +23,7 @@ mysqli_close($enlace);
 
 <html>
 <head>
+<link href="proveedor2.css" rel="stylesheet" type="text/css">
 <meta charset="UTF-8">
 </head>
 <body>
@@ -39,9 +40,9 @@ mysqli_close($enlace);
 
 <br>
 
-<input type="submit" name="registrar" value="Registrar Proveedor">
-<input type="submit" name="Reset" value="Limpiar" />
-<a href="proveedor.php"><input type="button" name="Inicio" value="Volver Al Menu" /></a>
+<input type="submit" name="registrar" id="button" value="Registrar Proveedor">
+<input type="submit" name="Reset"  id="button" value="Limpiar" />
+<a href="proveedor.php"><input type="button" name="Inicio"  id="button" value="Volver Al Menu" /></a>
 
 
 </form>

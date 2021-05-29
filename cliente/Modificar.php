@@ -55,6 +55,7 @@ mysqli_close($enlace);
 
 <html>
 <head>
+<link href="cliente2.css" rel="stylesheet" type="text/css">
 <meta charset="UTF-8">
 </head>
 <body>
@@ -62,7 +63,7 @@ mysqli_close($enlace);
 <form action="" method="POST">
 <h3>Autocompletar datos anteriores</h3>
 <p>DNI</p><input type="text" name="auto" >
-<input type="submit" name="complet" value="Autocompletar">
+<input type="submit" name="complet" id="button" value="Autocompletar">
 <br>
 <br>
 <br>
@@ -124,10 +125,10 @@ $resultado1=mysqli_query($enlace,$busqueda1);
 <br>
 
 
-<input type="submit" name="actualizar" value="Actualizar Cliente">
-<input type="submit" name="Reset" value="Limpiar" />
+<input type="submit" name="actualizar" id="button" value="Actualizar Cliente">
+<input type="submit" name="Reset" id="button" value="Limpiar" />
 <br>
-<a href="clientes.php"><input type="button" name="Inicio" value="Volver Al Menu" /></a>
+<a href="clientes.php"><input type="button" id="button" name="Inicio" value="Volver Al Menu" /></a>
 
 
 </form>
