@@ -101,7 +101,7 @@ elseif(isset($_POST['actualizar'])){
 <link href="proveedor.css" rel="stylesheet" type="text/css">
     <body>
 <center>
-    <h1>Editor de Proveedor</h1>
+    <h1>Editor de Proveedores</h1>
 <fieldset id="fieldset">
 <form method="POST" action=""> 
        <p>Introduzca el ID del proveedor :<input type="text" name="IDprov"/></p>
