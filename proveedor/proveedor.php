@@ -112,7 +112,7 @@ elseif(isset($_POST['actualizar'])){
        <input type="submit" name="actualizar" id="button" value="Actualizar Proveedor" />
        <br>
        <input type="reset" name="Reset" id="button" value="Limpiar" />
-       <a href="http://localhost/Proyectoiaw/inicio.php"><input type="button" name="Inicio" id="button" value="Volver Al Inicio" /></a>
+       <a href="http://localhost/Proyectoiaw/index.php"><input type="button" name="Inicio" id="button" value="Volver Al Inicio" /></a>
     </form>
 </fieldset>
 </center>
